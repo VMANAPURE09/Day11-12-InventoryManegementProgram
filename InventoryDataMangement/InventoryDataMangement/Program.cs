@@ -4,46 +4,47 @@ namespace InventoryDataMangement
 {
     internal class Program
     {
+        int a = 0;
         static void Main(string[] args)
         {
-            string path = "E:/BridgeLabz/Object_Oriented_Problem/Object_Oriented_Problem/ConsoleApp1/ConsoleApp1/json1.json";
+            string path = @"E:\BridgeLabz2\PraticeProblem\Day11-12-InventoryManegementProgram\InventoryDataMangement\InventoryDataMangement\Inventory.json";
 
             FetchDataForRice fetchDataForRice = new FetchDataForRice();
-            Rice data = fetchDataForRice.Read(path);
+             var data = fetchDataForRice.Read(path);
 
-            for (int i = 0; i < data.typesOfRice.Count; i++)
+            for (int i = 0; i < data.TypesOfRice.Count; i++)
             {
-                Console.WriteLine(data.typesOfRice[i].Name);
-                Console.WriteLine(data.typesOfRice[i].Weight);
-                Console.WriteLine(data.typesOfRice[i].Price);
-                int value = data.typesOfRice[i].Weight * data.typesOfRice[i].Price;
-                Console.WriteLine("The value of " + data.typesOfRice[i].Name + " Rice Inventory is :" + value);
+                Console.WriteLine(data.TypesOfRice[i].Name);
+                Console.WriteLine(data.TypesOfRice[i].Weight);
+                Console.WriteLine(data.TypesOfRice[i].Price);
+                int value = data.TypesOfRice[i].Weight * data.TypesOfRice[i].Price;
+                Console.WriteLine("The value of " + data.TypesOfRice[i].Name + " Rice Inventory is :" + value);
                 Console.WriteLine();
             }
 
             Console.WriteLine("--------------");
-            for (int i = 0; i < data.typesOfGrains.Count; i++)
+            for (int i = 0; i < data.TypesOfGrains.Count; i++)
             {
-                Console.WriteLine(data.typesOfGrains[i].Name);
-                Console.WriteLine(data.typesOfGrains[i].Weight);
-                Console.WriteLine(data.typesOfGrains[i].Price);
-                int value = data.typesOfGrains[i].Weight * data.typesOfGrains[i].Price;
-                Console.WriteLine("The value of " + data.typesOfGrains[i].Name + " Grain Inventory is :" + value);
+                Console.WriteLine(data.TypesOfGrains[i].Name);
+                Console.WriteLine(data.TypesOfGrains[i].Weight);
+                Console.WriteLine(data.TypesOfGrains[i].Price);
+                int value = data.TypesOfGrains[i].Weight * data.TypesOfGrains[i].Price;
+                Console.WriteLine("The value of " + data.TypesOfGrains[i].Name + " Grain Inventory is :" + value);
                 Console.WriteLine();
             }
 
             Console.WriteLine("--------------");
-            for (int i = 0; i < data.typesOfWheats.Count; i++)
+            for (int i = 0; i < data.TypesOfWheats.Count; i++)
             {
-                Console.WriteLine(data.typesOfWheats[i].Name);
-                Console.WriteLine(data.typesOfWheats[i].Weight);
-                Console.WriteLine(data.typesOfWheats[i].Price);
-                int value = data.typesOfWheats[i].Weight * data.typesOfWheats[i].Price;
-                Console.WriteLine("The value of " + data.typesOfWheats[i].Name + " Inventory is :" + value);
+                Console.WriteLine(data.TypesOfWheats[i].Name);
+                Console.WriteLine(data.TypesOfWheats[i].Weight);
+                Console.WriteLine(data.TypesOfWheats[i].Price);
+                int value = data.TypesOfWheats[i].Weight * data.TypesOfWheats[i].Price;
+                Console.WriteLine("The value of " + data.TypesOfWheats[i].Name + " Inventory is :" + value);
                 Console.WriteLine();
             }
 
-
+            Console.ReadLine();
         }
     }
 }
